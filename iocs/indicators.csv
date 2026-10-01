@@ -1,0 +1,5 @@
+"case_id","type","indicator","assessment"
+"PH-001","domain","micros0ft-support.example","Suspicious lookalike sender domain"
+"PH-001","domain","external-mail.example","Reply-To and Return-Path infrastructure"
+"PH-001","ip","203.0.113.45","Simulated source IP"
+"PH-001","url","hxxps://secure-account-review[.]example/login","Simulated credential phishing URL"

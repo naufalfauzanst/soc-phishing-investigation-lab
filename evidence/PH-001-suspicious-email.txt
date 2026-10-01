@@ -1,0 +1,26 @@
+From: Microsoft Security <security-alert@micros0ft-support.example>
+Reply-To: account-review@external-mail.example
+Return-Path: bounce@external-mail.example
+To: employee@company.example
+Subject: Urgent: Unusual sign-in detected
+Date: Thu, 1 Oct 2026 09:15:20 +0700
+Message-ID: <ph001-20261001@external-mail.example>
+
+Received: from mail.external-mail.example (203.0.113.45)
+    by mail.company.example with ESMTP;
+    Thu, 1 Oct 2026 09:15:20 +0700
+
+Authentication-Results: mail.company.example;
+    spf=fail smtp.mailfrom=external-mail.example;
+    dkim=none;
+    dmarc=fail header.from=micros0ft-support.example
+
+Dear User,
+
+We detected an unusual sign-in attempt. Your account will be suspended
+unless you verify it immediately.
+
+Verification link:
+hxxps://secure-account-review[.]example/login
+
+Microsoft Security Team
