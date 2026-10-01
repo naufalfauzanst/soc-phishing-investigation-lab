@@ -1,0 +1,32 @@
+From: Finance Department <finance@company.example>
+Reply-To: payment-update@billing-secure.example
+Return-Path: bounce@billing-secure.example
+To: accounts-payable@company.example
+Subject: Urgent: Updated bank details for invoice settlement
+Date: Thu, 1 Oct 2026 11:42:08 +0700
+Message-ID: <ph002-20261001@billing-secure.example>
+
+Received: from outbound.billing-secure.example (198.51.100.77)
+    by mail.company.example with ESMTP;
+    Thu, 1 Oct 2026 11:42:08 +0700
+
+Authentication-Results: mail.company.example;
+    spf=fail smtp.mailfrom=billing-secure.example;
+    dkim=none;
+    dmarc=fail header.from=company.example
+
+Hello Accounts Payable,
+
+Our bank account has changed. Please use the updated account below for all
+outstanding invoice payments and confirm the transfer by replying to this email.
+
+Bank: Example International Bank
+Account name: Company Settlement Services
+Account number: 000-002-2026
+
+This update is confidential and must be completed today to avoid late-payment
+charges. Do not contact the previous account manager because the old account
+has been closed.
+
+Regards,
+Finance Department

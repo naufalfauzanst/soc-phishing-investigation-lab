@@ -16,7 +16,7 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 | Case | Scenario | Verdict | Status |
 |---|---|---|---|
 | [PH-001](cases/PH-001-suspicious-link.md) | Suspicious credential-phishing link | True Positive — Authorized Simulation | Complete |
-| PH-002 | Spoofed sender | — | Planned |
+| [PH-002](cases/PH-002-spoofed-sender.md) | Spoofed finance sender | True Positive — Authorized Simulation | Complete |
 | PH-003 | Suspicious attachment | — | Planned |
 
 ## PH-001 Key Findings
@@ -24,6 +24,12 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 PH-001 covers a simulated email impersonating Microsoft Security. The investigation identified a lookalike sender domain, identity mismatches, failed SPF and DMARC checks, missing DKIM, urgent social-engineering language, and a suspicious login URL.
 
 The sample uses reserved `.example` domains and the documentation IP range `203.0.113.0/24`. No live malicious infrastructure was accessed.
+
+## PH-002 Key Findings
+
+PH-002 covers a simulated finance-department impersonation requesting an urgent bank-account change. The investigation identified a spoofed internal From address, external Reply-To and Return-Path domains, an externally generated Message-ID, failed SPF and DMARC checks, missing DKIM, and payment-focused social engineering.
+
+The sample uses reserved `.example` domains and the documentation IP range `198.51.100.0/24`. No real payment details or live infrastructure were used.
 
 ## Investigation Workflow
 
