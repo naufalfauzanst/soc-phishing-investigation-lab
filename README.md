@@ -20,6 +20,8 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 | [PH-003](cases/PH-003-suspicious-attachment.md) | HTML invoice attachment | True Positive — Authorized Simulation | Complete |
 | [PH-004](cases/PH-004-live-gmail-investigation.md) | Live Gmail delivery and header investigation | Benign — Authorized Training Email | Complete |
 
+| [PH-005](cases/PH-005-live-gmail-attachment.md) | Live Gmail attachment detection in Splunk | True Positive — Authorized Simulation | Complete |
+
 ## PH-001 Key Findings
 
 PH-001 covers a simulated email impersonating Microsoft Security. The investigation identified a lookalike sender domain, identity mismatches, failed SPF and DMARC checks, missing DKIM, urgent social-engineering language, and a suspicious login URL.
@@ -39,6 +41,10 @@ PH-003 analyzes a harmless HTML invoice attachment with a double extension, a wo
 ## PH-004 Key Findings
 
 PH-004 examines an email actually sent between two lab-owned Gmail accounts. Google reported SPF, DKIM, and DMARC as passing. The original EML was analyzed in the Windows VM and transferred to the host with a matching SHA-256. The case is classified as benign authorized training; no alert or compromise was demonstrated.
+
+## PH-005 Key Findings
+
+PH-005 links live Gmail delivery with the SOC homelab. Two harmless HTML invoice attachments were collected through Gmail API, indexed in Splunk through HTTPS HEC, and detected by DE-007. A scheduled digest alert triggered at 2026-10-02 14:47:01 with two results. Authentication passed for both messages; the detection matched the filename pattern rather than proving malware.
 
 ## Investigation Workflow
 
