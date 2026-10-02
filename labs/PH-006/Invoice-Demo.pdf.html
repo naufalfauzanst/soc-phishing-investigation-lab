@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="utf-8"><title>PH-006 — Formulir latihan lokal</title></head>
+<body>
+  <h1>PH-006: Pengiriman data formulir</h1>
+  <p>LAB LOKAL. Ini bukan halaman login layanan apa pun.</p>
+  <p>Data palsu di bawah dikirim ke server latihan pada komputer yang sama.</p>
+  <form action="http://127.0.0.1:9000/latihan" method="post">
+    <p><label>Username latihan: <input name="username" value="user-lab" readonly></label></p>
+    <p><label>Password palsu (ditampilkan untuk pembelajaran): <input name="password" value="DEMO-NOT-A-REAL-PASSWORD" readonly></label></p>
+    <button type="submit">Kirim data latihan</button>
+  </form>
+  <p>Setelah mengirim, lihat terminal server. Tidak ada akun yang digunakan untuk login.</p>
+</body>
+</html>

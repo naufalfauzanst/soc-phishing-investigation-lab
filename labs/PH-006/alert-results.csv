@@ -1,0 +1,3 @@
+event_time_utc_plus_07,host,username,peer_ip,path,detection_name,severity
+2026-10-02 16:27:34.133,ph006-local-lab,user-lab,127.0.0.1,/latihan,PH-006 Lab Form Submission Received,medium
+2026-10-02 16:24:15.032,ph006-local-lab,user-lab,127.0.0.1,/latihan,PH-006 Lab Form Submission Received,medium

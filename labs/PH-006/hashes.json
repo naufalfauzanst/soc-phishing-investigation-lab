@@ -1,0 +1,12 @@
+[
+  {
+    "file": "Invoice-Demo.pdf.html",
+    "sha256": "3CF31E7AFF8A1750264A1DC92BAA29771BD7A0DF1556024AF57CF13395B376FE",
+    "bytes": 779
+  },
+  {
+    "file": "receiver.py",
+    "sha256": "F1D979781864764883838504C60CAFB35B3AB3DD1317EA3BD904CC49114CF9DC",
+    "bytes": 4983
+  }
+]

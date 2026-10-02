@@ -1,0 +1,9 @@
+{
+  "tested_at_utc": "2026-10-02T09:08:27.901433+00:00",
+  "transport": "Python HTTP client; not browser or Gmail",
+  "bind_address": "127.0.0.1",
+  "test_port": 55841,
+  "valid_demo_post": "HTTP 200; one evidence record written",
+  "other_values": "HTTP 400; no evidence record written",
+  "status": "passed"
+}

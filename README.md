@@ -19,8 +19,8 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 | [PH-002](cases/PH-002-spoofed-sender.md) | Spoofed finance sender | True Positive — Authorized Simulation | Complete |
 | [PH-003](cases/PH-003-suspicious-attachment.md) | HTML invoice attachment | True Positive — Authorized Simulation | Complete |
 | [PH-004](cases/PH-004-live-gmail-investigation.md) | Live Gmail delivery and header investigation | Benign — Authorized Training Email | Complete |
-
 | [PH-005](cases/PH-005-live-gmail-attachment.md) | Live Gmail attachment detection in Splunk | True Positive — Authorized Simulation | Complete |
+| [PH-006](cases/PH-006-local-form-data-receipt.md) | Local HTML form submission and receiver evidence | Authorized simulation; fake data receipt confirmed | Complete — local receipt and Splunk alert validated |
 
 ## PH-001 Key Findings
 
@@ -46,6 +46,10 @@ PH-004 examines an email actually sent between two lab-owned Gmail accounts. Goo
 
 PH-005 links live Gmail delivery with the SOC homelab. Two harmless HTML invoice attachments were collected through Gmail API, indexed in Splunk through HTTPS HEC, and detected by DE-007. A scheduled digest alert triggered at 2026-10-02 14:47:01 with two results. Authentication passed for both messages; the detection matched the filename pattern rather than proving malware.
 
+## PH-006 Key Findings
+
+PH-006 demonstrates form-encoded HTTP POST receipt using a loopback-only Python receiver and a visibly labeled HTML training form. Fixed fake values were received and recorded; other values were rejected. The automated validation used a Python HTTP client. The user then submitted the local browser form, and a second receiver event was confirmed at 2026-10-02 09:16:16 UTC. Splunk file monitoring collected subsequent receiver records, and the scheduled PH-006 lab alert triggered at 2026-10-02 16:30:01 UTC+07:00 with two results. Gmail delivery and actual credential compromise were not established.
+
 ## Investigation Workflow
 
 1. Preserve the original email evidence.
@@ -63,6 +67,7 @@ PH-005 links live Gmail delivery with the SOC homelab. Two harmless HTML invoice
 - `iocs/` — Extracted indicators
 - `playbooks/` — Phishing triage procedures
 - `templates/` — Reusable investigation format
+- `labs/` — Reproducible local training exercises
 
 ## Tools and Skills Demonstrated
 
@@ -76,4 +81,4 @@ PH-005 links live Gmail delivery with the SOC homelab. Two harmless HTML invoice
 
 ## Safety
 
-All cases use sanitized, simulated, or publicly available training data. Suspicious links and attachments are never opened directly on the host system.
+All cases use sanitized, simulated, or publicly available training data. Unknown suspicious links and attachments are not opened directly on the host. PH-006 uses an inspected local form with fixed fake values and a loopback-only receiver; it sends no data to external infrastructure.

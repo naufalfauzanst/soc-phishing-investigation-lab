@@ -1,0 +1,6 @@
+index=email_security host="ph006-local-lab" earliest=-10m latest=now
+case_id="PH-006" method="POST" path="/latihan"
+| eval detection_name="PH-006 Lab Form Submission Received"
+| eval severity="medium"
+| table _time host username peer_ip path detection_name severity
+| sort - _time
