@@ -18,6 +18,7 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 | [PH-001](cases/PH-001-suspicious-link.md) | Suspicious credential-phishing link | True Positive — Authorized Simulation | Complete |
 | [PH-002](cases/PH-002-spoofed-sender.md) | Spoofed finance sender | True Positive — Authorized Simulation | Complete |
 | [PH-003](cases/PH-003-suspicious-attachment.md) | HTML invoice attachment | True Positive — Authorized Simulation | Complete |
+| [PH-004](cases/PH-004-live-gmail-investigation.md) | Live Gmail delivery and header investigation | Benign — Authorized Training Email | Complete |
 
 ## PH-001 Key Findings
 
@@ -34,6 +35,10 @@ The sample uses reserved `.example` domains and the documentation IP range `198.
 ## PH-003 Key Findings
 
 PH-003 analyzes a harmless HTML invoice attachment with a double extension, a work-account login request, and a defanged destination. File inspection and SHA-256 hashing identify the artifact. The synthetic headers record passing SPF, DKIM, and DMARC results, illustrating why content analysis remains necessary after authentication checks. No email delivery, credential collection, or compromise occurred.
+
+## PH-004 Key Findings
+
+PH-004 examines an email actually sent between two lab-owned Gmail accounts. Google reported SPF, DKIM, and DMARC as passing. The original EML was analyzed in the Windows VM and transferred to the host with a matching SHA-256. The case is classified as benign authorized training; no alert or compromise was demonstrated.
 
 ## Investigation Workflow
 

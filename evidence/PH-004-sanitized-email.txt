@@ -1,0 +1,36 @@
+PH-004 — SANITIZED EMAIL EXCERPT
+
+This is a manually sanitized excerpt of the original Gmail email.
+Addresses are placeholders. Message-ID and transport/signature metadata
+have been omitted or redacted. This file is not an original EML.
+
+From: Lab Sender <user.sender@gmail.com>
+To: user.analyst@gmail.com
+Return-Path: <user.sender@gmail.com>
+Date: Fri, 2 Oct 2026 13:34:04 +0700
+Message-ID: <REDACTED@mail.gmail.com>
+Subject: [SOC LAB] Invoice review — email investigation test
+Content-Type: multipart/alternative
+Authentication-Results: mx.google.com;
+    dkim=pass header.i=@gmail.com header.s=20251104;
+    spf=pass smtp.mailfrom=user.sender@gmail.com;
+    dmarc=pass header.from=gmail.com
+Sending server IP recorded in SPF result: 209.85.220.41
+
+Plain-text body:
+Hello SOC Lab Analyst,
+
+Please review the October invoice today.
+
+Verification address:
+hxxps://invoice-review[.]example/login
+
+This is an authorized SOC training email. The address above is reserved for
+documentation and is not an active login page. No credentials or payment
+are required.
+
+Regards,
+SOC Lab Sender
+
+Private original EML SHA-256 (same hash in VM and on host):
+8C515C6C57598B0A850A2B7BFA2D0AF979ED437E1C05CB797E23848F72576FCD
