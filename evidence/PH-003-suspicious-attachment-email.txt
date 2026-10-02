@@ -1,0 +1,26 @@
+From: Vendor Billing <invoices@vendor-billing.example>
+Reply-To: help@vendor-billing.example
+Return-Path: bounce@vendor-billing.example
+To: accounts-payable@company.example
+Subject: October invoice - review attached document
+Date: Fri, 2 Oct 2026 09:20:00 +0700
+Message-ID: <ph003-20261002@vendor-billing.example>
+Received: from mail.vendor-billing.example (192.0.2.88)
+    by mail.company.example with ESMTP;
+    Fri, 2 Oct 2026 09:20:00 +0700
+Authentication-Results: mail.company.example;
+    spf=pass smtp.mailfrom=vendor-billing.example;
+    dkim=pass header.d=vendor-billing.example;
+    dmarc=pass header.from=vendor-billing.example
+Attachment: Invoice-October.pdf.html
+
+Hello Accounts Payable,
+
+Please review the attached October invoice today.
+Open the attachment and sign in with your work account to view the invoice.
+
+Regards,
+Vendor Billing
+
+LAB NOTE: Synthetic training sample. Authentication results are fabricated
+for analysis. No email was delivered and no recipient activity is recorded.

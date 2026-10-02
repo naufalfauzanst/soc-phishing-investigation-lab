@@ -7,3 +7,8 @@
 "PH-002","domain","outbound.billing-secure.example","Simulated sending host"
 "PH-002","email","payment-update@billing-secure.example","External Reply-To address"
 "PH-002","ip","198.51.100.77","Simulated source IP"
+"PH-003","domain","vendor-billing.example","Simulated sender domain"
+"PH-003","filename","Invoice-October.pdf.html","HTML attachment with double extension"
+"PH-003","ip","192.0.2.88","Simulated source IP"
+"PH-003","sha256","95F89ECBB7748673AB59615D08B940522C5C512E4D0B4867DE4F606579C970A7","Hash of harmless training attachment"
+"PH-003","url","hxxps://invoice-access[.]example/login","Simulated credential phishing destination"

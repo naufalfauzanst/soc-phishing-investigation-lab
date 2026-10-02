@@ -17,7 +17,7 @@ A hands-on SOC portfolio project focused on suspicious email analysis, indicator
 |---|---|---|---|
 | [PH-001](cases/PH-001-suspicious-link.md) | Suspicious credential-phishing link | True Positive — Authorized Simulation | Complete |
 | [PH-002](cases/PH-002-spoofed-sender.md) | Spoofed finance sender | True Positive — Authorized Simulation | Complete |
-| PH-003 | Suspicious attachment | — | Planned |
+| [PH-003](cases/PH-003-suspicious-attachment.md) | HTML invoice attachment | True Positive — Authorized Simulation | Complete |
 
 ## PH-001 Key Findings
 
@@ -30,6 +30,10 @@ The sample uses reserved `.example` domains and the documentation IP range `203.
 PH-002 covers a simulated finance-department impersonation requesting an urgent bank-account change. The investigation identified a spoofed internal From address, external Reply-To and Return-Path domains, an externally generated Message-ID, failed SPF and DMARC checks, missing DKIM, and payment-focused social engineering.
 
 The sample uses reserved `.example` domains and the documentation IP range `198.51.100.0/24`. No real payment details or live infrastructure were used.
+
+## PH-003 Key Findings
+
+PH-003 analyzes a harmless HTML invoice attachment with a double extension, a work-account login request, and a defanged destination. File inspection and SHA-256 hashing identify the artifact. The synthetic headers record passing SPF, DKIM, and DMARC results, illustrating why content analysis remains necessary after authentication checks. No email delivery, credential collection, or compromise occurred.
 
 ## Investigation Workflow
 
